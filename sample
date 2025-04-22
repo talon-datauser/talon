@@ -1,0 +1,36 @@
+name: Python CI
+
+# Trigger the workflow on push and pull request events
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # You can also use macos-latest or windows-latest if preferred
+
+    steps:
+      # Checkout the code from the repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'  # You can specify another version if needed
+
+      # Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # Make sure you have a requirements.txt file in your repo
+
+      # Run tests
+      - name: Run tests
+        run: |
+          pytest  # If you're using pytest, if not replace with your testing command like `python -m unittest`
