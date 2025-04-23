@@ -13,4 +13,4 @@ steps:
       ]
 
 # Specify the logs bucket
-logsBucket: gs://data1
+logsBucket: gs://talon-buck-01
