@@ -11,3 +11,6 @@ steps:
         '--platform', 'managed',
         '--allow-unauthenticated'
       ]
+
+# Specify the logs bucket
+logsBucket: gs://data1
