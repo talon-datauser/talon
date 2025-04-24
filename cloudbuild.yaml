@@ -5,12 +5,12 @@ steps:
       [
         'run',
         'deploy',
-        'my-cloud-run-app',      # Your service name
+        'my-cloud-run-app',
         '--source', '.',
-        '--region', 'global',
+        '--region', 'us-central1',  
         '--platform', 'managed',
         '--allow-unauthenticated'
       ]
 
-# Specify the logs bucket
 logsBucket: gs://talon-buck-01
+
