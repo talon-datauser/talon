@@ -7,7 +7,7 @@ steps:
         'deploy',
         'my-cloud-run-app',      # Your service name
         '--source', '.',
-        '--region', 'us-central1',
+        '--region', 'global',
         '--platform', 'managed',
         '--allow-unauthenticated'
       ]
