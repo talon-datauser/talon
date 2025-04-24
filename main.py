@@ -4,5 +4,5 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello from Cloud Run!"
+    return "New version deployed via Cloud Build!"
 
